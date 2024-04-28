@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.beer.sell</groupId>
+        <artifactId>beer-sell-platform</artifactId>
+        <version>1.0.0</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+    <modules>
+        <module>beer-sell-common-core</module>
+        <module>beer-sell-common-db</module>
+        <module>oss-aliyun-boot-starter</module>
+        <module>swagger-spring-boot-starter</module>
+        <module>shiro-spring-boot-starter</module>
+    </modules>
+    <groupId>com.beer.sell.common</groupId>
+    <artifactId>beer-sell-common</artifactId>
+    <version>1.0.0</version>
+    <name>beer-sell-common</name>
+    <packaging>pom</packaging>
+</project>

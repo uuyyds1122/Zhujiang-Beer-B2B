@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.beer.sell.app</groupId>
+        <artifactId>beer-sell-app</artifactId>
+        <version>1.0.0</version>
+        <relativePath>../pom.xml</relativePath>
+    </parent>
+
+    <groupId>com.beer.sell.portal.app</groupId>
+    <artifactId>beer-sell-portal-app</artifactId>
+    <version>1.0.0</version>
+    <name>beer-sell-portal-app</name>
+    <description>啤酒经销商门户app</description>
+
+    <dependencies>
+
+        <!--导入主公共服务块包-->
+        <dependency>
+            <groupId>com.beer.sell.common</groupId>
+            <artifactId>beer-sell-common</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <!--导入核心包-->
+        <dependency>
+            <groupId>com.beer.sell.common.core</groupId>
+            <artifactId>beer-sell-common-core</artifactId>
+        </dependency>
+        <!--导入数据库包-->
+        <dependency>
+            <groupId>com.beer.sell.common.db</groupId>
+            <artifactId>beer-sell-common-db</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>com.beer.sell.common.swagger</groupId>
+            <artifactId>swagger-spring-boot-starter</artifactId>
+        </dependency>
+    </dependencies>
+
+
+    <packaging>jar</packaging>
+
+
+    <!--build放在</dependencies>标签的后面，主要加入的是resources标签 -->
+    <!--resources标签可以告诉系统启动的时候能够读取到这些后缀的文件 -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.yml</include>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/*.yml</include>
+                    <include>**/*.properties</include>
+                    <include>**/*.xml</include>
+                </includes>
+                <filtering>false</filtering>
+            </resource>
+            <resource>
+                <directory>lib</directory>
+                <includes>
+                    <include>**/*.jar</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
+    
+</project>

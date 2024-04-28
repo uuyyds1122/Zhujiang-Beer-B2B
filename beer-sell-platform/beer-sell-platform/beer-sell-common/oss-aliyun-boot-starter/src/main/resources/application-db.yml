@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      filters: "stat,wall,slf4j"
+      web-stat-filter:
+        enabled: true
+        url-pattern: /**
+        exclusions: "/druid/**"
+      stat-view-servlet:
+        enabled: true
+        url-pattern: "/druid/*"
+        login-username: admin
+        login-password: admin
+      username: root
+      password: root
+      url: "jdbc:mysql://127.0.0.1:3306/test?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false"
+      max-active: 20
+mybatis-plus:
+  # 核心配置
+  mapper-locations: classpath:mapper/**/*.xml
+
+
+
+
+

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.beer.sell.portal.app.mapper.DealerMapper">
+  <resultMap id="BaseResultMap" type="com.beer.sell.portal.app.entity.Dealer">
+    <!--@mbg.generated-->
+    <!--@Table dealer-->
+    <id column="dealer_user_id" jdbcType="BIGINT" property="dealerUserId" />
+    <result column="dealer_phone" jdbcType="VARCHAR" property="dealerPhone" />
+    <result column="dealer_username" jdbcType="VARCHAR" property="dealerUsername" />
+    <result column="dealer_password" jdbcType="VARCHAR" property="dealerPassword" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="dealer_company" jdbcType="VARCHAR" property="dealerCompany" />
+    <result column="dealer_real_username" jdbcType="VARCHAR" property="dealerRealUsername" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    dealer_user_id, dealer_phone, dealer_username, dealer_password, `status`, dealer_company, 
+    dealer_real_username
+  </sql>
+</mapper>
